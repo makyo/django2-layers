@@ -1,14 +1,14 @@
 options:
-  string-option:
+  repo:
     type: string
-    default: "Default Value"
-    description: "A short description of the configuration option"
-  boolean-option:
-    type: boolean
-    default: False
-    description: "A short description of the configuration option"
-  int-option:
+    default: "default-repo"
+    description: "The git repository from which to check out"
+  commit-or-branch:
+    type: string
+    default: "default-commit"
+    description: "The git branch or commit to check out"
+  port:
     type: int
-    default: 9001
-    description: "A short description of the configuration option"
+    default: 8000
+    description: "The port on which to serve"
 

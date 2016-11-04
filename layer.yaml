@@ -1,1 +1,18 @@
-includes: ['layer:basic']  # if you use any interfaces, add them here
+includes: 
+  - 'layer:basic'
+  - 'layer:apt'
+  - 'layer:git-deploy'
+  - 'interface:elasticsearch'
+  - 'interface:http'
+  - 'interface:logstash-client'
+  - 'interface:memcache'
+  - 'interface:mongodb'
+  - 'interface:mysql'
+  - 'interface:pgsql'
+  - 'interface:redis'
+  - 'interface:wsgi'
+repo: https://github.com/makyo/django2-layers.git
+options:
+  apt:
+    packages:
+      - python-pip
