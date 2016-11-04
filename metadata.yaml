@@ -1,19 +1,30 @@
 name: django2
-summary: <Fill in summary here>
-maintainer: Madison Scott-Clary <Madison.Scott-Clary@corrin>
+summary: A full-featured layer-based charm for Django deployments
+maintainer: Madison Scott-Clary <Madison.Scott-Clary@canonical.com>
 description: |
   <Multi-line description here>
 tags:
-  # Replace "misc" with one or more whitelisted tags from this list:
-  # https://jujucharms.com/docs/stable/authors-charm-metadata
-  - misc
+  - applications
+  - django
+  - cms
 subordinate: false
 provides:
-  provides-relation:
-    interface: interface-name
+  website:
+    interface: http
+  wsgi:
+    interface: wsgi
 requires:
-  requires-relation:
-    interface: interface-name
-peers:
-  peer-relation:
-    interface: interface-name
+  postgresql:
+    interface: pgsql
+  mysql:
+    interface: mysql
+  elasticsearch:
+    interface: elasticsearch
+  redis:
+    interface: redis
+  logstash:
+    interface: logstash-client
+  mongos:
+    interface: mongodb
+  cache:
+    interface: memcache
